@@ -19,13 +19,10 @@ declare global {
         PROJECT_ADMIN_GROUP_ID: string,
         PROJECT_GROUP_ID: string
     }
-    var configuration: Configuration;
 
     interface Window {
         configuration: Configuration;
     }
-
-    var window: Window;
 }
 
 export {}

@@ -4,7 +4,7 @@
   "description": "Super Vue Typescript Project",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot",
+    "watch": "webpack-dev-server --hot",
     "build": "npm run build-vue && npm run copy-assets",
     "build-vue": "cross-env NODE_ENV=development webpack",
     "copy-assets": "cpx \"./src/images/**/*\" \"./web/images/\""
@@ -79,7 +79,7 @@
     "vuex-module-decorators": "^0.9.8",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.10.3"
   },
   "author": "Paul Lalance",
   "license": "ISC"

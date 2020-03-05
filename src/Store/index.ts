@@ -30,12 +30,10 @@ const state = {
     sideNavCollapsed: false,
     appLoader: false,                          // App Loader is shown or not
     actionLoader: false,                          // Action Loader is shown or not
-    debugMode: configuration.DEBUG,       // App Debug Mode = Display console.log()
-
     cookieToken: VueCookie.get('token') || null,        // JWT Auth Token stored in cookies
     user: null,                                         // User authenticated = JWT claims
     companyId: '00'                                    // Company ID used for API requests
-};
+}
 
 const mutations = {
     TOGGLE_SIDENAV: (state, value) => {

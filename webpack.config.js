@@ -12,11 +12,10 @@ console.log('.ts files are registered for babel.');
 let config = {
     devtool: "source-map",
     entry: ['./src/App.ts', './src/scss/main.scss'],
-    mode: 'development',
     output: {
         path: path.resolve(__dirname, './web'),
         publicPath: '/',
-        filename: 'main.[chunkhash].js'
+        filename: 'main.[hash].js'
     },
     resolve: {
         extensions: ['.js', '.ts', '.vue']
@@ -95,7 +94,7 @@ let config = {
     plugins: [
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: "app.[contenthash].css",
+            filename: "app.[hash].css",
         }),
         new HtmlWebpackPlugin({
             template: "src/index_template.html",

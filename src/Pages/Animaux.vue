@@ -1,9 +1,7 @@
 <template>
     <div>
         <div class="row">
-            <div class="dashboard">
-                <h1>plalance-rest</h1>
-            </div>
+            <h1>Animaux</h1>
         </div>
     </div>
 </template>
@@ -54,7 +52,7 @@
         }
 
 
-        testObservable(){
+        testObservable() {
             (<Observable<any>>this.$store.getters[EnumGetters.TEST_OBSERVABLE])
                 .subscribe({
                     next: (value) => {

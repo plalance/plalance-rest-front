@@ -39,6 +39,7 @@ Vue.component('v-select', vSelect);
 (<any>window).M = M;
 (<any>window).axios = axios;
 
+
 // Definition de la locale dans instance vue (pour changement à la volée)
 Object.defineProperty(Vue.prototype, '$DEBUG', {
     get: function () {
