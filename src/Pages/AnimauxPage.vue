@@ -25,6 +25,7 @@
                     <th>id</th>
                     <th>nom</th>
                     <th>type</th>
+                    <th>propriétaire</th>
                     <th>action</th>
                 </tr>
                 </thead>
@@ -33,6 +34,7 @@
                     <td>{{ animal.id }}</td>
                     <td>{{ animal.nom }}</td>
                     <td>{{ animal.type }}</td>
+                    <th><span v-if="animal.proprietaire">{{ animal.proprietaire.prenom }}</span></th>
                     <td><a href="#" @click.prevent="deleteAnimal(animal.id)">Supprimer</a></td>
                 </tr>
                 </tbody>
