@@ -15,6 +15,13 @@
                     <input type="text" value="type" id="type" v-model="animalRequest.type">
                 </div>
 
+                <div class="form-group">
+                    <label for="proprietaire">Propriétaire</label>
+                    <select name="proprietaire" id="proprietaire" v-model="animalRequest.proprietaire" class="browser-default">
+                        <option v-for="personne in personnes" :value="personne">{{ personne.prenom }}</option>
+                    </select>
+                </div>
+
                 <button type="submit">Ajouter</button>
 
             </form>
@@ -50,7 +57,7 @@
     import {Observable} from "rxjs";
     import {EnumGetters} from "../Store/enumGetters";
 
-    import {Animal} from "../plalance-rest";
+    import {Animal, Personne} from "../plalance-rest";
 
     @Component({
         name: "AnimauxPage",
@@ -67,15 +74,18 @@
     export default class AnimauxPage extends Vue {
 
         animaux: Array<Animal> = null;
+        personnes : Array<Personne> = null;
 
         animalRequest: Animal = {
             id: null,
             nom: null,
-            type: null
+            type: null,
+            proprietaire: null
         };
 
         mounted() {
             this.loadAnimaux();
+            this.loadPersonnes();
         }
 
         loadAnimaux() {
@@ -85,6 +95,19 @@
             this.axios.get(url)
                 .then((response) => {
                     this.animaux = response.data;
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+
+        loadPersonnes() {
+
+            let url = "/back/personnes";
+
+            this.axios.get(url)
+                .then((response) => {
+                    this.personnes = response.data;
                 })
                 .catch((error) => {
                     console.log(error);
