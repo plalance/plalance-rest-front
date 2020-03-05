@@ -22,7 +22,13 @@ let config = {
     },
     devServer: {
         // noInfo: true,
-        port: 8000
+        port: 8000,
+        proxy: {
+            '/back': {
+                target: 'http://localhost:8080/',
+                pathRewrite: {'^/back': ''}
+            }
+        }
     },
     module: {
         rules: [

@@ -8,8 +8,11 @@ Vue.use(VueRouter);
 
 import HomePage from "../Pages/Home.vue"
 import LoginPage from "../Pages/Login.vue"
-import LoginFakePage from "../Pages/LoginFake.vue";
+import LoginFakePage from "../Pages/LoginFake.vue"
 import NotFoundPage from "../Pages/Errors/404.vue"
+
+import AnimauxPage from "../Pages/AnimauxPage.vue"
+
 
 export const routes = [
     {
@@ -24,6 +27,19 @@ export const routes = [
             requireAuth: false
         },
         component: HomePage
+    },
+    {
+        path: "/animaux",
+        name: "animaux",
+        meta: {
+            title: "Animaux",
+            admin: false,
+            visible: true,
+            accessible: true,
+            icon: "dashboard",
+            requireAuth: false
+        },
+        component: AnimauxPage
     },
     {
         path: "/login",
