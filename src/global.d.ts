@@ -12,6 +12,7 @@ declare global {
         MG2_PROPOSITION_BACK_URL: string,
         ADFS_BASE_URL: string,
         ADFS_URL: string,
+        BACK_URL: string;
         GRANT_TYPE: string,
         CLIENT_ID: string,
         REDIRECT_URI: string,

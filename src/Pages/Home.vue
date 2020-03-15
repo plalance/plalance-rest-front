@@ -3,6 +3,14 @@
         <div class="row">
             <div class="dashboard">
                 <h1>plalance-rest</h1>
+
+                <router-link to="/animaux">
+                    Animaux
+                </router-link>
+
+                <router-link to="/sse">
+                    Sse
+                </router-link>
             </div>
         </div>
     </div>

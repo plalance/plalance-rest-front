@@ -11,6 +11,8 @@ const config = {
     ADFS_BASE_URL: "#",
     ADFS_URL: "#",
 
+    BACKEND_URL: 'http://192.168.0.22',
+
     // ADFS CONFIGURATION
     GRANT_TYPE: '#',
     CLIENT_ID: '#',

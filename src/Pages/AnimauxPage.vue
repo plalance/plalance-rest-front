@@ -3,6 +3,10 @@
         <div class="row">
             <h1>Animaux</h1>
 
+            <router-link to="/">
+                Retour
+            </router-link>
+
             <form action="#" @submit.prevent="putAnimal()">
 
                 <div class="form-group">

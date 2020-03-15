@@ -12,6 +12,7 @@ import LoginFakePage from "../Pages/LoginFake.vue"
 import NotFoundPage from "../Pages/Errors/404.vue"
 
 import AnimauxPage from "../Pages/AnimauxPage.vue"
+import SsePage from "../Pages/SsePage.vue"
 
 
 export const routes = [
@@ -40,6 +41,19 @@ export const routes = [
             requireAuth: false
         },
         component: AnimauxPage
+    },
+    {
+        path: "/sse",
+        name: "sse",
+        meta: {
+            title: "Sse",
+            admin: false,
+            visible: true,
+            accessible: true,
+            icon: "dashboard",
+            requireAuth: false
+        },
+        component: SsePage
     },
     {
         path: "/login",

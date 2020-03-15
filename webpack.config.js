@@ -22,10 +22,10 @@ let config = {
     },
     devServer: {
         // noInfo: true,
-        port: 8000,
+        port: 8002,
         proxy: {
             '/back': {
-                target: 'http://localhost:8080/',
+                target: 'http://localhost:8000/plalance-rest',
                 pathRewrite: {'^/back': ''}
             }
         }
